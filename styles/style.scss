@@ -12,7 +12,7 @@ body.light {
 }
 
 .container {
-	max-width: 1024px;
+	max-width: 1310px;
 	width: 86%;
 	margin-left: auto;
 	margin-right: auto;
@@ -20,8 +20,6 @@ body.light {
 
 // Header
 header {
-	display: flex;
-	flex-direction: column;
 	padding-top: 24px;
 	padding-bottom: 92px;
 	background-color: $very-dark-blue-top-bg;
@@ -238,13 +236,19 @@ header {
 		margin-bottom: 20px;
 	}
 
+	.overview-items {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
 	.overview-item {
 		padding: 24px;
 		background-color: $dark-desaturated-blue;
+		border-radius: 4px;
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
-		border-radius: 4px;
 
 		&-head {
 			display: flex;
@@ -301,6 +305,81 @@ header {
 
 			.number {
 				color: $very-dark-blue;
+			}
+		}
+	}
+}
+
+// Responsive
+@media only screen and (min-width: 1440px) {
+	header {
+		margin-bottom: 28px;
+		padding-bottom: 124px;
+
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.titles-wrapper {
+			border: unset;
+			padding-bottom: unset;
+
+			.header-title {
+				font-size: 32px;
+			}
+
+			.header-sub-title {
+				font-size: 20px;
+			}
+		}
+
+		.theme-state {
+			gap: 24px;
+
+			.theme {
+				font-size: 20px;
+			}
+
+			.toggle-btn {
+				padding: 18px 36px;
+
+				.toggle-circle {
+					padding: 12px;
+					top: 6px;
+				}
+			}
+		}
+
+		&.light {
+			.toggle-btn {
+				.toggle-circle {
+					left: 40px;
+				}
+			}
+		}
+	}
+
+	#followers {
+		flex-direction: row;
+		margin-top: -72px;
+
+		.follower-item {
+			flex: 1;
+			padding: 36px 0;
+			gap: 16px;
+		}
+	}
+
+	#overview {
+		.overview-items {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.overview-item {
+				width: 290px;
 			}
 		}
 	}
