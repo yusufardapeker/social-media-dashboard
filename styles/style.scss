@@ -3,4 +3,66 @@
 body {
 	font-size: 14px;
 	font-family: "Inter", sans-serif;
+	background-color: $very-dark-blue-top-bg;
+	color: $white;
+}
+
+.container {
+	max-width: 1024px;
+	width: 86%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Header
+header {
+	display: flex;
+	flex-direction: column;
+	padding-top: 24px;
+
+	.titles-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $desaturated-blue;
+
+		.header-title {
+			font-size: 24px;
+		}
+
+		.header-sub-title {
+			color: $toggle-light;
+		}
+	}
+
+	.theme-state {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 16px;
+
+		.theme {
+			color: $toggle-light;
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		.toggle-btn {
+			background: linear-gradient(to right, $toggle-dark);
+			padding: 14px 28px;
+			border-radius: 9999px;
+			position: relative;
+
+			.toggle-circle {
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				background-color: $very-dark-blue;
+				padding: 10px;
+				border-radius: 50%;
+				z-index: 9;
+			}
+		}
+	}
 }

@@ -1,4 +1,58 @@
 body {
   font-size: 14px;
   font-family: "Inter", sans-serif;
+  background-color: hsl(232, 19%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+.container {
+  max-width: 1024px;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+header .titles-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(228, 34%, 66%);
+}
+header .titles-wrapper .header-title {
+  font-size: 24px;
+}
+header .titles-wrapper .header-sub-title {
+  color: hsl(230, 22%, 74%);
+}
+header .theme-state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+header .theme-state .theme {
+  color: hsl(230, 22%, 74%);
+  font-size: 16px;
+  font-weight: 700;
+}
+header .theme-state .toggle-btn {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  padding: 14px 28px;
+  border-radius: 9999px;
+  position: relative;
+}
+header .theme-state .toggle-btn .toggle-circle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: hsl(230, 17%, 14%);
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 9;
 }/*# sourceMappingURL=style.css.map */
