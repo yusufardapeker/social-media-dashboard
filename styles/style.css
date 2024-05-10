@@ -149,9 +149,55 @@ header .theme-state .toggle-btn .toggle-circle {
 #followers .follower-item .state-of-affairs .affair-number {
   color: hsl(163, 72%, 41%);
 }
-#followers .follower-item:first-child .affair-number {
-  color: unset;
-}
 #followers .follower-item:last-child .affair-number {
+  color: hsl(356, 69%, 56%);
+}
+
+#overview {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#overview .overview-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+#overview .overview-item {
+  padding: 20px;
+  background-color: hsl(228, 28%, 20%);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 4px;
+}
+#overview .overview-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#overview .overview-item-head .title {
+  font-size: 16px;
+  color: hsl(228, 34%, 66%);
+}
+#overview .overview-item-numbers {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+#overview .overview-item-numbers .number {
+  font-size: 32px;
+}
+#overview .overview-item-numbers .percentage {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+#overview .overview-item-numbers.incline .percentage {
+  color: hsl(163, 72%, 41%);
+}
+#overview .overview-item-numbers.decline .percentage {
   color: hsl(356, 69%, 56%);
 }/*# sourceMappingURL=style.css.map */

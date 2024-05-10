@@ -178,15 +178,71 @@ header {
 			}
 		}
 
-		&:first-child {
-			.affair-number {
-				color: unset;
-			}
-		}
-
 		&:last-child {
 			.affair-number {
 				color: $bright-red;
+			}
+		}
+	}
+}
+
+#overview {
+	margin-top: 32px;
+	margin-bottom: 48px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.overview-title {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	.overview-item {
+		padding: 20px;
+		background-color: $dark-desaturated-blue;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		border-radius: 4px;
+
+		&-head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.title {
+				font-size: 16px;
+				color: $desaturated-blue;
+			}
+		}
+
+		&-numbers {
+			display: flex;
+			align-content: center;
+			justify-content: space-between;
+			font-weight: 700;
+
+			.number {
+				font-size: 32px;
+			}
+
+			.percentage {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+			}
+
+			&.incline {
+				.percentage {
+					color: $lime-green;
+				}
+			}
+
+			&.decline {
+				.percentage {
+					color: $bright-red;
+				}
 			}
 		}
 	}
