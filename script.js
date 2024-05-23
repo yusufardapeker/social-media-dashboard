@@ -6,10 +6,10 @@ const headerElement = document.querySelector("header");
 const followersSection = document.querySelector("#followers");
 const overviewSection = document.querySelector("#overview");
 
-addLight = [toggleCircle, bodyElement, headerElement, followersSection, overviewSection];
+toggleLight = [toggleCircle, bodyElement, headerElement, followersSection, overviewSection];
 
 toggleButton.addEventListener("click", () => {
-	addLight.forEach((item) => {
+	toggleLight.forEach((item) => {
 		item.classList.toggle("light");
 	});
 });
