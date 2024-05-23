@@ -50,7 +50,6 @@ header .theme-state .toggle-btn {
   padding: 14px 28px;
   border-radius: 9999px;
   position: relative;
-  cursor: pointer;
 }
 header .theme-state .toggle-btn .toggle-circle {
   position: absolute;
@@ -76,9 +75,6 @@ header.light .theme {
 header.light .toggle-btn {
   background: hsl(230, 22%, 74%);
 }
-header.light .toggle-btn:hover {
-  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-}
 header.light .toggle-btn .toggle-circle {
   background-color: hsl(0, 0%, 100%);
   left: 32px;
@@ -99,11 +95,6 @@ header.light .toggle-btn .toggle-circle {
   align-items: center;
   gap: 12px;
   position: relative;
-  cursor: pointer;
-  transition: background-color 200ms;
-}
-#followers .follower-item:hover {
-  background-color: hsl(228, 12%, 44%);
 }
 #followers .follower-item:nth-child(1)::before {
   content: "";
@@ -219,11 +210,6 @@ header.light .toggle-btn .toggle-circle {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  cursor: pointer;
-  transition: background-color 200ms;
-}
-#overview .overview-item:hover {
-  background-color: hsl(228, 12%, 44%);
 }
 #overview .overview-item-head {
   display: flex;
