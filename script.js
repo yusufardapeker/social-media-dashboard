@@ -1,15 +1,12 @@
 const toggleButton = document.querySelector(".toggle-btn");
-const toggleCircle = document.querySelector(".toggle-circle");
+const body = document.body;
 
-const bodyElement = document.querySelector("body");
-const headerElement = document.querySelector("header");
-const followersSection = document.querySelector("#followers");
-const overviewSection = document.querySelector("#overview");
+body.dataset.theme = localStorage.getItem("theme");
+const toSetTheme = body.dataset.theme === "light" ? "dark" : "light";
 
-toggleLight = [toggleCircle, bodyElement, headerElement, followersSection, overviewSection];
+const handleToggle = () => {
+	body.dataset.theme = toSetTheme;
+	localStorage.setItem("theme", toSetTheme);
+};
 
-toggleButton.addEventListener("click", () => {
-	toggleLight.forEach((item) => {
-		item.classList.toggle("light");
-	});
-});
+toggleButton.addEventListener("click", handleToggle);

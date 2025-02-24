@@ -1,14 +1,23 @@
 @import "colors";
 
+:root {
+	&:has([data-theme="light"]) {
+		color-scheme: light;
+	}
+	&:has([data-theme="dark"]) {
+		color-scheme: dark;
+
+		.toggle-circle {
+			left: 60% !important;
+		}
+	}
+}
+
 body {
 	font-size: 14px;
 	font-family: "Inter", sans-serif;
-	background-color: $very-dark-blue-bg;
+	background-color: light-dark($white, $very-dark-blue-bg);
 	color: $white;
-}
-
-body.light {
-	background-color: $white;
 }
 
 .container {
@@ -22,7 +31,8 @@ body.light {
 header {
 	padding-top: 24px;
 	padding-bottom: 92px;
-	background-color: $very-dark-blue-top-bg;
+	background-color: light-dark($very-pale-blue, $very-dark-blue-top-bg);
+	color: light-dark($very-dark-blue, inherit);
 
 	.titles-wrapper {
 		display: flex;
@@ -33,10 +43,11 @@ header {
 
 		.header-title {
 			font-size: 24px;
+			color: light-dark($very-dark-blue, $white);
 		}
 
 		.header-sub-title {
-			color: $desaturated-blue;
+			color: light-dark($dark-grayish-blue, $desaturated-blue);
 		}
 	}
 
@@ -47,13 +58,13 @@ header {
 		margin-top: 16px;
 
 		.theme {
-			color: $desaturated-blue;
+			color: light-dark($dark-grayish-blue, $desaturated-blue);
 			font-size: 16px;
 			font-weight: 700;
 		}
 
 		.toggle-btn {
-			background: linear-gradient(to right, $toggle-dark);
+			background: light-dark($toggle-light, $toggle-dark);
 			padding: 14px 28px;
 			border-radius: 9999px;
 			position: relative;
@@ -62,39 +73,12 @@ header {
 			.toggle-circle {
 				position: absolute;
 				top: 4px;
-				left: 4px;
-				background-color: $very-dark-blue;
+				left: 8%;
+				background-color: light-dark($white, $very-dark-blue);
 				padding: 10px;
 				border-radius: 50%;
 				z-index: 9;
 				transition: all 300ms ease;
-			}
-		}
-	}
-
-	&.light {
-		background-color: $very-pale-blue;
-		border-bottom: 1px solid $light-grayish-blue;
-		color: $very-dark-blue;
-
-		.header-sub-title {
-			color: $dark-grayish-blue;
-		}
-
-		.theme {
-			color: $dark-grayish-blue;
-		}
-
-		.toggle-btn {
-			background: $toggle-light;
-
-			&:hover {
-				background: linear-gradient(to right, $toggle-dark);
-			}
-
-			.toggle-circle {
-				background-color: $white;
-				left: 32px;
 			}
 		}
 	}
@@ -107,7 +91,7 @@ header {
 	gap: 24px;
 
 	.follower-item {
-		background-color: $dark-desaturated-blue;
+		background-color: light-dark($light-grayish-blue, $dark-desaturated-blue);
 		padding: 24px 0;
 		border-radius: 4px;
 		display: flex;
@@ -166,7 +150,7 @@ header {
 
 			.media-address {
 				font-size: 12px;
-				color: $desaturated-blue;
+				color: light-dark($very-dark-blue, $desaturated-blue);
 				font-weight: 700;
 			}
 		}
@@ -179,10 +163,11 @@ header {
 			.number {
 				font-size: 48px;
 				font-weight: 700;
+				color: light-dark($very-dark-blue, $white);
 			}
 
 			.number-type {
-				color: $desaturated-blue;
+				color: light-dark($dark-grayish-blue, $desaturated-blue);
 				text-transform: uppercase;
 				letter-spacing: 4px;
 				font-size: 12px;
@@ -207,24 +192,6 @@ header {
 			}
 		}
 	}
-
-	&.light {
-		.follower-item {
-			background-color: $light-grayish-blue;
-
-			.media-address {
-				color: $very-dark-blue;
-			}
-
-			.number {
-				color: $very-dark-blue;
-			}
-
-			.number-type {
-				color: $dark-grayish-blue;
-			}
-		}
-	}
 }
 
 #overview {
@@ -237,6 +204,7 @@ header {
 	.overview-title {
 		font-size: 24px;
 		margin-bottom: 20px;
+		color: light-dark($dark-grayish-blue, $white);
 	}
 
 	.overview-items {
@@ -247,7 +215,7 @@ header {
 
 	.overview-item {
 		padding: 24px;
-		background-color: $dark-desaturated-blue;
+		background-color: light-dark($light-grayish-blue, $dark-desaturated-blue);
 		border-radius: 4px;
 		display: flex;
 		flex-direction: column;
@@ -265,7 +233,7 @@ header {
 
 			.title {
 				font-size: 16px;
-				color: $desaturated-blue;
+				color: light-dark($dark-grayish-blue, $desaturated-blue);
 			}
 		}
 
@@ -277,6 +245,7 @@ header {
 
 			.number {
 				font-size: 32px;
+				color: light-dark($very-dark-blue, $white);
 			}
 
 			.percentage {
@@ -295,24 +264,6 @@ header {
 				.percentage {
 					color: $bright-red;
 				}
-			}
-		}
-	}
-
-	&.light {
-		.overview-title {
-			color: $dark-grayish-blue;
-		}
-
-		.overview-item {
-			background-color: $light-grayish-blue;
-
-			.title {
-				color: $dark-grayish-blue;
-			}
-
-			.number {
-				color: $very-dark-blue;
 			}
 		}
 	}
@@ -357,14 +308,6 @@ header {
 				.toggle-circle {
 					padding: 12px;
 					top: 6px;
-				}
-			}
-		}
-
-		&.light {
-			.toggle-btn {
-				.toggle-circle {
-					left: 42px;
 				}
 			}
 		}
