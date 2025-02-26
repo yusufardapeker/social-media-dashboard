@@ -3,12 +3,20 @@
 :root {
 	&:has([data-theme="light"]) {
 		color-scheme: light;
+
+		.toggle-btn {
+			background-color: $toggle-light;
+		}
 	}
 	&:has([data-theme="dark"]) {
 		color-scheme: dark;
 
-		.toggle-circle {
-			left: 60% !important;
+		.toggle-btn {
+			background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+			.toggle-circle {
+				left: 60%;
+			}
 		}
 	}
 }
@@ -64,7 +72,6 @@ header {
 		}
 
 		.toggle-btn {
-			background: light-dark($toggle-light, $toggle-dark);
 			padding: 14px 28px;
 			border-radius: 9999px;
 			position: relative;

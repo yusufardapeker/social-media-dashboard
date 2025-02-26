@@ -1,11 +1,17 @@
 :root:has([data-theme=light]) {
   color-scheme: light;
 }
+:root:has([data-theme=light]) .toggle-btn {
+  background-color: hsl(230, 22%, 74%);
+}
 :root:has([data-theme=dark]) {
   color-scheme: dark;
 }
-:root:has([data-theme=dark]) .toggle-circle {
-  left: 60% !important;
+:root:has([data-theme=dark]) .toggle-btn {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+:root:has([data-theme=dark]) .toggle-btn .toggle-circle {
+  left: 60%;
 }
 
 body {
@@ -54,7 +60,6 @@ header .theme-state .theme {
   font-weight: 700;
 }
 header .theme-state .toggle-btn {
-  background: light-dark(hsl(230, 22%, 74%), hsl(146, 68%, 55%));
   padding: 14px 28px;
   border-radius: 9999px;
   position: relative;
