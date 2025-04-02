@@ -109,7 +109,7 @@ header {
 		cursor: pointer;
 
 		&:hover {
-			background-color: $dark-grayish-blue;
+			background-color: light-dark($toggle-light, $dark-grayish-blue);
 		}
 
 		@mixin beforeElement {
@@ -230,7 +230,7 @@ header {
 		cursor: pointer;
 
 		&:hover {
-			background-color: $dark-grayish-blue;
+			background-color: light-dark($toggle-light, $dark-grayish-blue);
 		}
 
 		&-head {
